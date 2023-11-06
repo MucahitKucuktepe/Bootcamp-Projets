@@ -5,8 +5,11 @@ console.log(rasgeleSayi);
 let mesaj = document.querySelector(".msg");
 let skor = 10;
 //*skor u index html den çekebilirdik ama çok kullancağımız için bu daha tercih edilen yol oldu
+//! Local Storage da top-score adıyla bir değişken varsa onu getir yoksa 0 getir
+let enYuksekSkor = localStorage.getItem("top-score") || 0;
+//! browserda, DOM da top-score değerinin local storage dan okuyarak güncelle özellikle 2.ve 3. oyuncular için önemli
+document.querySelector(".top-score").textContent = enYuksekSkor;
 
-let enYuksekSkor = 0;
 //?Her Check butonuna basıldıgında yapılacaklar
 document.querySelector(".check").addEventListener("click", () => {
   const tahmin = document.querySelector(".guess").value;
@@ -21,6 +24,7 @@ document.querySelector(".check").addEventListener("click", () => {
 
     //*Top Scorre Kontrolü
     if (skor > enYuksekSkor) {
+      localStorage.setItem("top-score", skor);
       enYuksekSkor = skor;
       document.querySelector(".top-score").textContent = enYuksekSkor;
     }
@@ -51,6 +55,7 @@ document.querySelector(".again").onclick = () => {
   document.querySelector("body").style.backgroundColor = "#2d3436";
 
   rasgeleSayi = Math.ceil(Math.random() * 20);
+  console.log(rasgeleSayi);
 
   skor = 10;
   document.querySelector(".score").textContent = skor;
@@ -69,3 +74,15 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+document.querySelector(".check").addEventListener("click",()=>{
+    tahmin=document.querySelector(".guess").value
+
+    const tahminSayi=parseInt(tahmin)
+
+    if(tahmin>=1 && tahminSayi <=20 && !isNaN(tahminSayi)){
+        //*Dogru tahmin yapıldı oyuna devam
+    }else{
+        mesaj.textContent="Geçersiz sayı girdiniz (1-20) arasında bir sayı giriniz"
+        skor ++
+    }
+})
