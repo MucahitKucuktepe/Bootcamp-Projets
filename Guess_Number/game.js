@@ -1,48 +1,40 @@
-const myArr = [1, 2, 3];
-const myArr2 = [4, 5, 6];
-console.log(myArr + myArr2);
-let course = [
-  ["Data Science", "AI"],
-  ["Aws", "Devops"],
-  ["Frontend", ["Javascript"]],
-];
-console.log(course[2][1][0]);
+//?PC ye 1-20 arasında sayı tutturduk
+let rasgeleSayi = Math.ceil(Math.random() * 20);
+console.log(rasgeleSayi);
 
-let arr = ["vwefvkmw"];
-arr[0].toLocaleUpperCase;
+let mesaj = document.querySelector(".msg");
+let skor = 10;
+//*skor u index html den çekebilirdik ama çok kullancağımız için bu daha tercih edilen yol oldu
 
-console.log(arr);
-const number = [1, 2, 3, 4, 5];
-console.log(number);
-let person = { name: "Anthony" };
-person = null;
-const instructor = [person];
+let enYuksekSkor = 0;
+//?Her Check butonuna basıldıgında yapılacaklar
+document.querySelector(".check").addEventListener("click", () => {
+  const tahmin = document.querySelector(".guess").value;
+  //!tahmin girmeden butona basıldıysa
+  if (!tahmin) {
+    mesaj.textContent = "Lütfen Bir Sayı Giriniz";
+    //!Tahmin Dogruysa Calısacak kısım
+  } else if (tahmin == rasgeleSayi) {
+    mesaj.textContent = "Tebrikler Nildiniz!🎯";
+    document.querySelector("body").style.backgroundColor = "green";
+    document.querySelector(".number").textContent = rasgeleSayi;
 
-console.log(instructor);
+    //*Top Scorre Kontrolü
 
-const data = {
-  products: [
-    {
-      prod1: {
-        price: 1500,
-      },
-      prod2: {
-        price: 1500,
-      },
-      prod3: {
-        price: 1500,
-      },
-      prod4: {
-        price: 1500,
-      },
-      prod5: {
-        price: 1500,
-      },
-    },
-  ],
-  total: "5",
-};
-const {products}=data
-console.log(products);
-const priceArr=Object.keys(products[0]).map((item)=>products[0][item].price)
-console.log(priceArr);
+    //!Tahmin Yanlışsa
+  } else {
+    //? Skor 1'den büyük oldugu sürece tahmin hakkım var
+    if (skor > 1) {
+      skor--;
+      document.querySelector(".score").textContent = skor;
+
+      tahmin < rasgeleSayi
+        ? (mesaj.textContent = "Arttır⏫")
+        : (mesaj.textContent = "Azalt⏬");
+    } else {
+      mesaj.textContent = "Oyunu Kaybettiniz🥹";
+      document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.backgroundColor = "red";
+    }
+  }
+});
