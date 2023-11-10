@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+.wallet {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  gap: 0.7rem;
+}
+.wallet h1 {
+  font-size: 2rem;
+  color: rgb(199, 113, 8);
+}
+
+.wallet img {
+  width: 2rem;
+}
+
+.form1 {
+  background-color: rgb(248, 247, 245);
+  border-radius: 10px;
+}
+.form2 {
+  margin-top: 20px !important;
+  display: flex !important;
+  justify-content: space-between;
+  background-color: rgb(248, 247, 245);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.ekle {
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: green;
+  color: white;
+  font-size: small;
+}
+
+.ekstre {
+  background-color: rgb(248, 247, 245);
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex !important;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 20px;
+}
+
+table {
+
+  width: 100%;
+  margin-top: 20px;
+}
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid red;
+}
+th {
+  background-color: white;
+}
+
+.outcome{
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex !important;
+  justify-content: end;
+  margin: auto;
+  margin-top: 20px;
+}
+.total tr td {
+  text-align: end;
+}

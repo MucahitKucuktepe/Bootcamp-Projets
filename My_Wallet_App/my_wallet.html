@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wallet App⚓</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="wallet">
+          <h1>My Wallet App</h1>
+          <img
+            src="./img/card2.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+        </div>
+      </header>
+      <form class="container row m-auto g-3 form1">
+        <h5 class="text-center">Harcama Formu</h5>
+        <div class="col-md-6">
+          <label for="validationTooltip01" class="form-label">Tarih</label>
+          <input
+            type="date"
+            class="form-control"
+            id="validationTooltip01"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="validationTooltip02" class="form-label"
+            >Harcama Miktarı</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="validationTooltip02"
+            required
+          />
+        </div>
+        <div class="col-md-12">
+          <label for="validationTooltip03" class="form-label"
+            >Harcama Alanı</label
+          >
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Kira, Fatura, Kredi Kartı</option>
+            <option value="1">Kira</option>
+            <option value="2">Fatura</option>
+            <option value="3">Kredi Kartı</option>
+          </select>
+        </div>
+        <div class="col-12 text-center pb-2">
+          <button class="btn btn-primary bg bg-danger" type="submit">
+            Kaydet
+          </button>
+        </div>
+      </form>
+      <form class="form2 container">
+        <input
+          class="col-11 gelir"
+          type="number"
+          name=""
+          id="gelir"
+          placeholder="Gelirinizi giriniz."
+        />
+        <button class="col-1 ekle" type="submit">Ekle</button>
+      </form>
+      <div class="container ekstre row">
+        <table class="harcama col-12">
+          <tr>
+            <th class="tarih">Tarih</th>
+            <th class="harcama">Harcama Alanı</th>
+            <th class="miktar">Miktar(₺)</th>
+            <th class="işlem">İşlem</th>
+          </tr>
+        </table>
+      </div>
+      <div class="container outcome row">
+        <table class="total col-4">
+          <tr>
+            <td class="col-6">Geliriniz(₺):</td>
+            <td></td>
+            <!-- Gelir miktarını XXX olarak değiştirin -->
+          </tr>
+          <tr>
+            <td class="col-6">Gideriniz(₺):</td>
+            <td></td>
+            <!-- Gider miktarını YYY olarak değiştirin -->
+          </tr>
+          <tr>
+            <td class="col-6">Kalan(₺):</td>
+            <td></td>
+            <!-- Kalan miktarını ZZZ olarak değiştirin -->
+          </tr>
+        </table>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary bg bg-danger" type="submit" id="clear">
+            Bilgileri Temizle
+          </button>
+      </div>
+      <!-- İhtiyacınıza göre satırları artırabilirsiniz -->
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
