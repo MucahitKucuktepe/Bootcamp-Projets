@@ -26,8 +26,7 @@ save.addEventListener("click", () => {
   spendTypeCell.textContent = expenditure;
   quantityCell.textContent = amount;
 
-//   const deletebtn = document.createElement("button");
-//   deletebtn.classList.add('delete', 'btn', 'btn-danger');
-//   deletebtn.innerText = "Delete";
-//   actionCell.appendChild(deletebtn);
+  const deletebtn = document.createElement("button");
+  deletebtn.classList.add('fa-solid', 'fa-trash');
+  actionCell.appendChild(deletebtn);
 });

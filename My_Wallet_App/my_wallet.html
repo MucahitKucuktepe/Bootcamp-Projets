@@ -10,6 +10,13 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -46,22 +53,28 @@
           />
         </div>
         <div class="col-md-12">
-          <label for="select" class="form-label"
-            >Expenditure Session</label
-          >
+          <label for="select" class="form-label">Expenditure Session</label>
           <select
             class="form-select expenditure"
             aria-label="Default select example"
             id="select"
           >
             <option selected>Kira, Fatura, Kredi Kartı</option>
-            <option value="1">Kira</option>
-            <option value="2">Fatura</option>
-            <option value="3">Kredi Kartı</option>
+            <option>Kira</option>
+            <option>Fatura</option>
+            <option>Kredi Kartı</option>
+            <option>Market</option>
+            <option>Eglence</option>
+            <option>Seyahat</option>
+            <option>Sağlık</option>
           </select>
         </div>
         <div class="col-12 text-center pb-2">
-          <button class="btn btn-primary bg bg-danger save" type="button" id="save">
+          <button
+            class="btn btn-primary bg bg-danger save"
+            type="button"
+            id="save"
+          >
             Save
           </button>
         </div>
