@@ -27,6 +27,6 @@ save.addEventListener("click", () => {
   quantityCell.textContent = amount;
 
   const deletebtn = document.createElement("button");
-  deletebtn.classList.add('fa-solid', 'fa-trash');
+  deletebtn.classList.add('fa-solid', 'fa-trash','border-0' ,'text-danger');
   actionCell.appendChild(deletebtn);
 });
