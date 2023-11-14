@@ -1,32 +1,28 @@
 //?CONSTANTS
+const ekleBtn = document.getElementById("ekle-btn");
+const gelirInput = document.getElementById("gelir-input");
+const ekleFormu = document.getElementById("ekle-formu");
 
+//?Variables
+let gelirler =0 ;
 
-save.addEventListener("click", () => {
-  //*input u tanıttım
-  const date = document.getElementById("validationTooltip01").value;
-  console.log(date);
-  const amount = document.getElementById("validationTooltip02").value;
-  console.log(amount);
-  const expenditure = document.querySelector(".expenditure").value;
+//*Hesap Tablosu
+const gelirinizTd = document.getElementById("geliriniz");
+const giderinizTd = document.getElementById("gideriniz");
+const kalanTd = document.getElementById("kalan");
 
-  //*table ı tanıttım
-  const table = document.querySelector(".spend");
+//*Harcama Formu
 
-  //*Kaydetten sonra rowleri ve celleri yapıyorum
-
-  const newRow = table.insertRow();
-
-  const dateCell = newRow.insertCell(0);
-  const spendTypeCell = newRow.insertCell(1);
-  const quantityCell = newRow.insertCell(2);
-  const actionCell = newRow.insertCell(3);
-
-  //* hücrelerin içeriğini belirliyorum
-  dateCell.textContent = date;
-  spendTypeCell.textContent = expenditure;
-  quantityCell.textContent = amount;
-
-  const deletebtn = document.createElement("button");
-  deletebtn.classList.add('fa-solid', 'fa-trash','border-0' ,'text-danger');
-  actionCell.appendChild(deletebtn);
+ekleFormu.addEventListener("submit", (e) => {
+  e.preventDefault();
+  gelirler = gelirler + Number(gelirInput.value);
+  console.log(gelirler);
+  localStorage.setItem("gelirler", gelirler);
+  gelirinizTd.innerText = gelirler;
+  ekleFormu.reset();
+});
+//!Sayfa yüklendiğinde olacsklst
+window.addEventListener("load", () => {
+  gelirler = Number(localStorage.getItem("gelirler")) ;
+  gelirinizTd.innerText = gelirler;
 });

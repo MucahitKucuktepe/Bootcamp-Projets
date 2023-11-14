@@ -29,11 +29,11 @@
       <form id="harcama-formu" class="container row m-auto g-3 form1">
         <h5 class="text-center">Harcama Formu</h5>
         <div class="col-6">
-          <label for="validationTooltip01" class="form-label">Date</label>
+          <label for="tarih" class="form-label">Date</label>
           <input type="date" class="form-control date" id="tarih" />
         </div>
         <div class="col-6">
-          <label for="validationTooltip02" class="form-label">Amount</label>
+          <label for="miktar" class="form-label">Amount</label>
           <input
             type="number"
             class="form-control amount"
@@ -76,7 +76,7 @@
           id="gelir-input"
           placeholder="Gelirinizi giriniz."
         />
-        <button id="ekle-btn" class="btn btn-success" type="submit">Add</button>
+        <button id="ekle-btn" class="btn btn-success" type="submit">Ekle</button>
       </form>
       <div class="container ekstre row">
         <table
@@ -95,7 +95,7 @@
         </table>
       </div>
       <div class="container sonuc row">
-        <table
+        <table id="sonuc-tablosu"
           class="total table table-bordered table-hover table-striped mt-4 text-center w-50 ms-auto"
         >
           <tbody class="text-end">
