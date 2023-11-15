@@ -29,11 +29,11 @@
       <form id="harcama-formu" class="container row m-auto g-3 form1">
         <h5 class="text-center">Harcama Formu</h5>
         <div class="col-6">
-          <label for="tarih" class="form-label">Date</label>
+          <label for="tarih" class="form-label">Tarih</label>
           <input type="date" class="form-control date" id="tarih" />
         </div>
         <div class="col-6">
-          <label for="miktar" class="form-label">Amount</label>
+          <label for="miktar" class="form-label">Miktar</label>
           <input
             type="number"
             class="form-control amount"
@@ -42,13 +42,13 @@
           />
         </div>
         <div class="col-12">
-          <label for="select" class="form-label">Expenditure Session</label>
+          <label for="select" class="form-label">Harcama Alanı</label>
           <select
             class="form-select expenditure"
             aria-label="Default select example"
             id="select"
           >
-            <option selected>Kira, Fatura, Kredi Kartı</option>
+            <option>Kira, Fatura, Kredi Kartı</option>
             <option>Kira</option>
             <option>Fatura</option>
             <option>Kredi Kartı</option>
@@ -61,7 +61,7 @@
         <div class="col-12 text-center pb-2">
           <button
             class="btn btn-primary bg bg-danger save"
-            type="button"
+            type="submit"
             id="kaydet"
           >
             Kaydet
@@ -98,6 +98,7 @@
         <table id="sonuc-tablosu"
           class="total table table-bordered table-hover table-striped mt-4 text-center w-50 ms-auto"
         >
+        
           <tbody class="text-end">
             <tr>
               <th class="col-6 gelir">Geliriniz(₺):</th>
