@@ -1,22 +1,20 @@
 const userRandom = async () => {
-    try{
-        const res = await fetch("https://randomuser.me/api/");
-        if (!res.ok) {
-            throw new Error(`Something went wrong:${res.status}`);
+  try {
+    const res = await fetch("https://randomuser.me/api/");
+    if (!res.ok) {
+      throw new Error(`Something went wrong:${res.status}`);
     }
     const data = await res.json();
     renderUser(data.results);
     console.log(data);
-    } catch (error){
-        const userDiv = document.getElementById("user-div");
-        userDiv.innerHTML +=`
+  } catch (error) {
+    const userDiv = document.getElementById("user-div");
+    userDiv.innerHTML += `
         <h2>${error}</h2>
   
-        `
-    }
-  
+        `;
+  }
 };
-
 const renderUser = (users) => {
   const userDiv = document.getElementById("user-div");
 
