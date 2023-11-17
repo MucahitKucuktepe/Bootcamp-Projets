@@ -20,7 +20,7 @@ const show = (users) => {
     <div class="card" >
       <img src="${picture["large"]}" class="card-img-top" alt="...">
       <div class="card-body ">
-          <h5 class="card-title text-center">${name["title"]} ${name["first"]} ${name["last"]}</h5>
+          <h5 class="card-title text-center">${name.title} ${name["first"]} ${name["last"]}</h5>
           <p class="card-text">${location["country"]} ${location["state"]} ${location["city"]}</p>
           <p class="card-text">${gender}</p>
           <p class="card-text">${email}</p>

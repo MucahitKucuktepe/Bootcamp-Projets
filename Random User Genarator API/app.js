@@ -6,7 +6,7 @@ const userRandom = async () => {
     }
     const data = await res.json();
     renderUser(data.results);
-    console.log(data);
+   
   } catch (error) {
     const userDiv = document.getElementById("user-div");
     userDiv.innerHTML += `
